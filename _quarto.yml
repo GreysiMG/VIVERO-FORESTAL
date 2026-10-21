@@ -1,0 +1,30 @@
+
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Vivero Forestal"
+  navbar:
+    background: success
+    left:
+      - href: index.qmd
+        text: Inicio
+  page-footer:
+    center: "Monitoreo de plantones forestales | RStudio y Quarto"
+
+format:
+  html:
+    theme: minty
+    toc: true
+    toc-title: "Contenido"
+    number-sections: true
+    smooth-scroll: true
+
+execute:
+  echo: false
+  warning: false
+  message: false
+
+editor: visual
+

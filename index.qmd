@@ -1,0 +1,195 @@
+
+---
+title: "Evaluación del Crecimiento de Plantones Forestales"
+subtitle: "Monitoreo de especies producidas en vivero"
+author: "Greysi Jennifer Manosalva Gonzales"
+---
+
+# Bienvenidos
+
+Esta página presenta una demostración del seguimiento del crecimiento y supervivencia de plantones forestales en condiciones de vivero.
+
+El trabajo fue elaborado utilizando RStudio y Quarto, herramientas que permiten organizar información y presentar resultados mediante tablas y gráficos.
+
+# Introducción
+
+Los viveros forestales son importantes porque permiten producir plantones que posteriormente pueden utilizarse en actividades de reforestación y recuperación de áreas degradadas.
+
+Durante la producción de plantones es necesario observar su crecimiento, supervivencia y desarrollo para conocer su comportamiento en el vivero.
+
+# Objetivos
+
+## Objetivo general
+
+Evaluar mediante datos de ejemplo el crecimiento y la supervivencia de diferentes especies forestales.
+
+## Objetivos específicos
+
+- Comparar el crecimiento de cuatro especies forestales.
+- Calcular el porcentaje de supervivencia.
+- Elaborar tablas y gráficos utilizando RStudio.
+- Interpretar los resultados obtenidos.
+
+# Metodología
+
+Para esta demostración se consideran cuatro especies forestales:
+
+- Cedro
+- Caoba
+- Bolaina
+- Capirona
+
+Se supone que inicialmente se instalaron 30 plantones por especie.
+
+Los datos son simulados y se utilizan únicamente para demostrar el funcionamiento del análisis.
+
+# Registro de datos
+
+```{r}
+datos <- data.frame(
+  Especie = c("Cedro", "Caoba", "Bolaina", "Capirona"),
+  Inicial = c(30, 30, 30, 30),
+  Vivos = c(27, 26, 29, 28),
+  Altura_cm = c(15, 14, 20, 16)
+)
+
+datos$Supervivencia <- round(
+  datos$Vivos / datos$Inicial * 100,
+  1
+)
+```
+
+# Resultados
+
+## Tabla de evaluación
+
+En la siguiente tabla se presentan los resultados simulados de supervivencia y altura final de los plantones.
+
+```{r}
+knitr::kable(
+  datos,
+  caption = "Resultados de las especies forestales",
+  col.names = c(
+    "Especie",
+    "Plantones iniciales",
+    "Plantones vivos",
+    "Altura final (cm)",
+    "Supervivencia (%)"
+  )
+)
+```
+
+## Gráfico de supervivencia
+
+Este gráfico compara el porcentaje de plantones que permanecieron vivos durante el periodo de evaluación.
+
+```{r}
+colores <- c(
+  "#2E7D32",
+  "#66BB6A",
+  "#1565C0",
+  "#FF9800"
+)
+
+barras <- barplot(
+  datos$Supervivencia,
+  names.arg = datos$Especie,
+  col = colores,
+  main = "Supervivencia de plantones forestales",
+  xlab = "Especies forestales",
+  ylab = "Supervivencia (%)",
+  ylim = c(0, 110)
+)
+
+text(
+  barras,
+  datos$Supervivencia + 4,
+  labels = paste0(datos$Supervivencia, "%")
+)
+```
+
+## Comparación de alturas
+
+A continuación se presenta un gráfico de barras para comparar la altura final de las especies.
+
+```{r}
+barplot(
+  datos$Altura_cm,
+  names.arg = datos$Especie,
+  col = colores,
+  main = "Altura final de plantones",
+  xlab = "Especies forestales",
+  ylab = "Altura (cm)",
+  ylim = c(0, 25)
+)
+```
+
+# Evaluación del crecimiento
+
+Para ilustrar el crecimiento durante cuatro semanas, se utilizarán los siguientes valores simulados.
+
+```{r}
+crecimiento <- data.frame(
+  Semana = c(1, 2, 3, 4),
+  Cedro = c(7, 9, 12, 15),
+  Caoba = c(6, 8, 10, 14),
+  Bolaina = c(8, 11, 15, 20),
+  Capirona = c(7, 10, 13, 16)
+)
+
+knitr::kable(
+  crecimiento,
+  caption = "Crecimiento semanal de plantones (cm)"
+)
+```
+
+## Gráfico de crecimiento semanal
+
+```{r}
+matplot(
+  crecimiento$Semana,
+  crecimiento[, -1],
+  type = "b",
+  pch = 19,
+  lty = 1,
+  col = colores,
+  xlab = "Semana de evaluación",
+  ylab = "Altura (cm)",
+  main = "Crecimiento de especies forestales",
+  xaxt = "n"
+)
+
+axis(
+  1,
+  at = crecimiento$Semana
+)
+
+legend(
+  "topleft",
+  legend = names(crecimiento)[-1],
+  col = colores,
+  lty = 1,
+  pch = 19,
+  cex = 0.8
+)
+```
+
+# Interpretación de resultados
+
+Según los datos simulados, la bolaina presentó la mayor altura final, alcanzando 20 cm en la cuarta semana.
+
+Asimismo, esta especie registró una supervivencia aproximada de 96.7%, mientras que la caoba obtuvo el menor porcentaje de supervivencia.
+
+Estas diferencias permiten observar cómo se pueden comparar especies forestales utilizando herramientas estadísticas sencillas.
+
+# Conclusiones
+
+El seguimiento de los plantones permite conocer su crecimiento y supervivencia durante la producción en vivero.
+
+Las tablas y gráficos realizados en RStudio facilitan la comparación de los resultados entre especies forestales.
+
+Quarto permite presentar los resultados de manera organizada mediante una página web accesible desde internet.
+
+# Nota final
+
+Los datos utilizados en esta página son ejemplos simulados con fines educativos. No corresponden a una evaluación experimental real.

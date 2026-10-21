@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Evaluación del Crecimiento de Plantones Forestales",
+    "section": "",
+    "text": "Esta página presenta una demostración del seguimiento del crecimiento y supervivencia de plantones forestales en condiciones de vivero.\nEl trabajo fue elaborado utilizando RStudio y Quarto, herramientas que permiten organizar información y presentar resultados mediante tablas y gráficos."
+  },
+  {
+    "objectID": "index.html#objetivo-general",
+    "href": "index.html#objetivo-general",
+    "title": "Evaluación del Crecimiento de Plantones Forestales",
+    "section": "3.1 Objetivo general",
+    "text": "3.1 Objetivo general\nEvaluar mediante datos de ejemplo el crecimiento y la supervivencia de diferentes especies forestales."
+  },
+  {
+    "objectID": "index.html#objetivos-específicos",
+    "href": "index.html#objetivos-específicos",
+    "title": "Evaluación del Crecimiento de Plantones Forestales",
+    "section": "3.2 Objetivos específicos",
+    "text": "3.2 Objetivos específicos\n\nComparar el crecimiento de cuatro especies forestales.\nCalcular el porcentaje de supervivencia.\nElaborar tablas y gráficos utilizando RStudio.\nInterpretar los resultados obtenidos."
+  },
+  {
+    "objectID": "index.html#tabla-de-evaluación",
+    "href": "index.html#tabla-de-evaluación",
+    "title": "Evaluación del Crecimiento de Plantones Forestales",
+    "section": "6.1 Tabla de evaluación",
+    "text": "6.1 Tabla de evaluación\nEn la siguiente tabla se presentan los resultados simulados de supervivencia y altura final de los plantones.\n\n\n\nResultados de las especies forestales\n\n\n\n\n\n\n\n\n\nEspecie\nPlantones iniciales\nPlantones vivos\nAltura final (cm)\nSupervivencia (%)\n\n\n\n\nCedro\n30\n27\n15\n90.0\n\n\nCaoba\n30\n26\n14\n86.7\n\n\nBolaina\n30\n29\n20\n96.7\n\n\nCapirona\n30\n28\n16\n93.3"
+  },
+  {
+    "objectID": "index.html#gráfico-de-supervivencia",
+    "href": "index.html#gráfico-de-supervivencia",
+    "title": "Evaluación del Crecimiento de Plantones Forestales",
+    "section": "6.2 Gráfico de supervivencia",
+    "text": "6.2 Gráfico de supervivencia\nEste gráfico compara el porcentaje de plantones que permanecieron vivos durante el periodo de evaluación."
+  },
+  {
+    "objectID": "index.html#comparación-de-alturas",
+    "href": "index.html#comparación-de-alturas",
+    "title": "Evaluación del Crecimiento de Plantones Forestales",
+    "section": "6.3 Comparación de alturas",
+    "text": "6.3 Comparación de alturas\nA continuación se presenta un gráfico de barras para comparar la altura final de las especies."
+  },
+  {
+    "objectID": "index.html#gráfico-de-crecimiento-semanal",
+    "href": "index.html#gráfico-de-crecimiento-semanal",
+    "title": "Evaluación del Crecimiento de Plantones Forestales",
+    "section": "7.1 Gráfico de crecimiento semanal",
+    "text": "7.1 Gráfico de crecimiento semanal"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n\n[1] 2"
+  }
+]
